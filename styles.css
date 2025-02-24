@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+   /* background: #2a1a66;*/
+   overflow: hidden;
+   background: url("https://img.freepik.com/free-vector/trendy-retro-synth-line-perspective-wallpaper-with-smoke-effect_1017-43048.jpg") no-repeat center center fixed;
+   background-size: cover;
+   animation: animateBackground 30s linear infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+@keyframes animateBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+#landing {
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #ff9800;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+#game-container {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+#score-timer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover{
+    background-color: lightpink;
+}
+.card .hidden {
+    display: none;
+}
+
+.card.revealed {
+    background-color: #ddd;
+}
+.card img{
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+}
+
+.card.matched {
+    background-color: green;
+    color: white;
+    pointer-events: none;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#restart-btn:hover {
+    background-color: #b22b34;
+}
+
+@media (max-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+    .card {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+} 
