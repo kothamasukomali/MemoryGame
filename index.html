@@ -8,12 +8,12 @@
 </head>
 <body>
         <div id="landing">
-            <h1>⭐ Memory Game ⭐</h1>
+            <h1 id="game-title">⭐ Memory Match Game ⭐</h1>
         <p>Select a category to start playing</p>
-        <button class="btn" data-category="fruits">Fruits</button>
-        <button class="btn" data-category="icons">icons</button>    
-        <button class="btn" data-category="emojis">emojis</button>
-        <button class="btn" data-category="logos">logos</button>
+        <button class="btn" data-category="fruits">🍎 Fruits</button>
+        <button class="btn" data-category="icons">🚀 icons</button>    
+        <button class="btn" data-category="emojis">😀 emojis</button>
+        <button class="btn" data-category="logos">🗽logos</button>
 
     </div>
     <div id="game-container" >
@@ -24,6 +24,8 @@
         <div id="game-board"></div>
         <button id="restart-btn">Restart</button>
     </div>
+    <div id="game-over-message" class="hidden"></div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
