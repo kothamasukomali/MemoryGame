@@ -8,7 +8,8 @@
 body {
    /* background: #2a1a66;*/
    overflow: hidden;
-   background: url("https://img.freepik.com/free-vector/trendy-retro-synth-line-perspective-wallpaper-with-smoke-effect_1017-43048.jpg") no-repeat center center fixed;
+  /* background: url("https://img.freepik.com/free-vector/trendy-retro-synth-line-perspective-wallpaper-with-smoke-effect_1017-43048.jpg") no-repeat center center fixed;*/
+  background: url("https://i.pinimg.com/736x/0f/84/e0/0f84e0888e08e702c7919f6ec01a7612.jpg") no-repeat center center fixed;
    background-size: cover;
    animation: animateBackground 30s linear infinite;
     color: white;
@@ -30,7 +31,16 @@ body {
         background-position: 0% 0%;
     }
 }
-
+#game-title {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    color: darkgreen;
+    text-align: center;
+  }
+  
+  
 #landing {
     padding: 20px;
 }
@@ -40,9 +50,10 @@ h1 {
 }
 
 p {
-    font-size: 20px;
+    font-size:2rem;
     margin-bottom: 10px;
     margin-top: 10px;
+    color:darkslateblue;
 }
 
 .btn {
@@ -75,7 +86,8 @@ p {
     width: 100%;
     max-width: 400px;
     margin: 0 auto 20px;
-    font-size: 18px;
+    font-size: 22px;
+    color:violet;
 }
 
 #game-board {
@@ -138,6 +150,18 @@ p {
 #restart-btn:hover {
     background-color: #b22b34;
 }
+#game-over-message {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    color: red;
+}
+.hidden {
+    display: none;
+}
+
 
 @media (max-width: 600px) {
     #game-board {
@@ -149,3 +173,4 @@ p {
         font-size: 18px;
     }
 } 
+
